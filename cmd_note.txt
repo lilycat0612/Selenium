@@ -1,0 +1,7 @@
+创建版本库：
+mkdir foldername
+cd foldername
+git init #初始化
+创建readme.txt
+git add readme.txt #添加文件
+git commit #提交文件
