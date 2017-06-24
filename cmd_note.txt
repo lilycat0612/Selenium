@@ -2,11 +2,18 @@
 mkdir foldername
 cd foldername
 git init #初始化
+
 创建文件
 git add 文件名 #提交文件到暂存区stage
 git commit #提交文件到分支master
-git reset --hard commit_id #查看提交李四，以便回退到commit_id的版本
+git reset --hard commit_id #查看提交历史，以便回退到commit_id的版本
 git reflog #查看历史命令，以便回到未来版本
 
 git checkout -- 文件名 #丢弃工作区的修改
-git rest HEAD 文件名 #丢弃暂存区的修改，把暂存区的修改会退到工作区
+git reset HEAD 文件名 #丢弃暂存区的修改，把暂存区的修改会退到工作区
+
+git rm 文件名：删除工作区的文件
+git reset HEAD 文件名 #丢弃暂存区的修改，把暂存区的修改会退到工作区
+git checkout -- 文件名 #用版本库中的版本替代工作区的版本
+
+ssh-keygen -t rsa -C "27803532@qq.com" #产生ssh key
