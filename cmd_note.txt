@@ -26,3 +26,5 @@ git clone 网址 #从网址下载
 git branch name #创建分支
 git checkout name #切换分支
 git branch #查看当前分支
+
+add branch
