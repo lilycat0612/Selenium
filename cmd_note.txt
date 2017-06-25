@@ -23,8 +23,11 @@ git push #当前分支master推送到远程
 
 git clone 网址 #从网址下载
 
-git branch branch_name #创建分支
-git checkout branch_name #切换分支
+git branch branch_name #创建branch_name分支
+git checkout branch_name #切换到branch_name分支
+git checkout -b branch_name #创建并切换到branch_name分支
+git branch -d branch_name #删除branch_name分支
 git branch #查看当前分支
+git merge branch_name #合并branch_name分支到当前分支
 
-git push --set-upstream origin branch_name #工作区分支删除到分支branch_nam
+git push --set-upstream origin branch_name #首次将工作区分支删除到分支branch_nam
