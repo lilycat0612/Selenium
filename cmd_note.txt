@@ -27,4 +27,4 @@ git branch branch_name #创建分支
 git checkout branch_name #切换分支
 git branch #查看当前分支
 
-create a new branch new_branch
+git push --set-upstream origin branch_name #工作区分支删除到分支branch_nam
