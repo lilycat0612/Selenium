@@ -35,39 +35,49 @@ class DownloadBtFiles(unittest.TestCase):
 
         print self.driver.current_url
 
-        time.sleep(10)
+        time.sleep(5)
         self.driver.back()
         print 'Move back to:'+self.driver.current_url
-        time.sleep(10)
+        time.sleep(5)
         self.driver.forward()
         print 'Move forword to:'+self.driver.current_url
-        time.sleep(10)
+        time.sleep(5)
         # if str(self.driver.title).contains('hao123'):
         #     print "DONE"
 
     def test_scroll(self):
 
         ele=self.driver.find_element_by_tag_name('html')
-        time.sleep(10)
+        time.sleep(5)
         ele.send_keys(Keys.END)
-        time.sleep(10)
+        time.sleep(5)
         ele.send_keys(Keys.HOME)
-        time.sleep(10)
+        time.sleep(5)
 
     def test_get_browser_version(self):
         print(self.driver.capabilities['version'])
 
     def test_open_new_tab(self):
         try:
-           ele=self.driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 't')
-           #it can't open new tab,but fail to find out reason
+           self.driver.find_element_by_tag_name('body').send_keys(Keys.CONTROL + 't')
+           print "New Tab"
         except Exception as e:
             print "Exception found",format(e)
-        
+        self.driver.get('www.bing.com')
         time.sleep(30)
         print self.driver.current_url
 
+    def test_set_size(self):
+        self.driver.set_window_size(524,768)
+        time.sleep(3)
+        print self.driver.get_window_size()
+        self.driver.maximize_window()
+        time.sleep(3)
+
+
+
 if __name__=='__main__':
-    unittest.main(verbosity=2)
+    unittest.main()
+    # verbosity=2
     
     
